@@ -29,7 +29,9 @@ if personalInfo:
 
 col1,col2 = st.columns(2)
 with col1:
-    st.write('To be completed next week')
+    st.image('sedona_usa-1.jpeg')
+    st.write('Sedona, USA')
 with col2:
-    st.write('Have a great weekend!')
-    st.balloons()
+    st.video('volcano-1.mp4')
+    st.write('Active Volcano')
+st.audio('Alla-Turca-1.mp3')
