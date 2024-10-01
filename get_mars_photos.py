@@ -16,4 +16,16 @@ for i in mars_photos['photos']:
     list_of_cameras.append(camera_name)
 
 unique_camera = set(list_of_cameras)
-print(unique_camera)
+# print(unique_camera)
+
+import streamlit as st
+
+st.title('Test Mars Photos')
+st.subheader('Check Photos from Mars')
+
+camera = st.selectbox('Camera', unique_camera)
+
+if camera:
+    for i in mars_photos['photos']:
+        if i['camera']['full_name'] == camera:
+            st.image(i['img_src'],width=360)
